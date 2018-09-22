@@ -1,0 +1,21 @@
+Exception:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/pip/basecommand.py", line 215, in main
+    status = self.run(options, args)
+  File "/usr/lib/python2.7/site-packages/pip/commands/install.py", line 365, in run
+    strip_file_prefix=options.strip_file_prefix,
+  File "/usr/lib/python2.7/site-packages/pip/req/req_set.py", line 784, in install
+    **kwargs
+  File "/usr/lib/python2.7/site-packages/pip/req/req_install.py", line 854, in install
+    strip_file_prefix=strip_file_prefix
+  File "/usr/lib/python2.7/site-packages/pip/req/req_install.py", line 1069, in move_wheel_files
+    strip_file_prefix=strip_file_prefix,
+  File "/usr/lib/python2.7/site-packages/pip/wheel.py", line 345, in move_wheel_files
+    clobber(source, lib_dir, True)
+  File "/usr/lib/python2.7/site-packages/pip/wheel.py", line 316, in clobber
+    ensure_dir(destdir)
+  File "/usr/lib/python2.7/site-packages/pip/utils/__init__.py", line 83, in ensure_dir
+    os.makedirs(path)
+  File "/usr/lib64/python2.7/os.py", line 157, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 13] Permission denied: '/usr/lib64/python2.7/site-packages/coverage'
